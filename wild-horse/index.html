@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Wild Horse</title>
+<meta name="description" content="The Wild Horse: open questions on why the best AI models do brilliant work one minute and fail the next. Share your experience.">
+<style>
+:root{--bg:#f6f3ec;--ink:#24231f;--soft:#5d5a52;--line:#c9c3b4;--card:#fffdf8;--accent:#9a4a26;--accent-bg:#f6e3d8}
+@media (prefers-color-scheme:dark){:root{--bg:#1b1a17;--ink:#ece8de;--soft:#b3ad9f;--line:#4a463d;--card:#25241f;--accent:#e4a07c;--accent-bg:#4a2a1a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.7 Georgia,"Times New Roman",serif}
+main{max-width:720px;margin:0 auto;padding:32px 16px 64px}
+a{color:var(--accent)}
+nav a{color:var(--soft);font-size:.95rem}
+h1{font-size:2.2rem;font-weight:normal;margin:.6em 0 .2em}
+h2{font-size:1.3rem;font-weight:normal;margin:2em 0 .5em}
+.lead{color:var(--soft);font-size:1.15rem}
+ul{padding-left:1.2em}
+.ask{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin-top:1.2em}
+.ask h3{font-size:1.15rem;font-weight:normal;margin:0 0 .3em}
+.draft{border-left:3px solid var(--accent);padding:4px 0 4px 16px;font-style:italic}
+.btn{display:inline-block;margin:8px 10px 0 0;padding:10px 18px;border-radius:8px;text-decoration:none;font:15px/1 system-ui,sans-serif}
+.btn.main{background:var(--accent);color:var(--bg)}
+.btn.alt{border:1px solid var(--accent);color:var(--accent)}
+.page-logo{display:block;width:150px;height:150px;border-radius:12px;margin:0 0 18px}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="../">← Back to the map</a></nav>
+<h1>The Wild Horse</h1>
+<p class="lead">Open questions on why the best AI models are so unpredictable and unstable: brilliant work one minute, a loose cannon the next. People share their experience, and we look for the pattern from the ground up.</p>
+<p class="draft">I don't know about you but I have had enough of seeing the services we are paying more and more for and $ is only one part of it my time and yours for ex are irreplaceable, so I came to ask myself, am I the only one who is experiencing this kind of psychotic behaviour / and it became rapidly clear that, well no.</p>
+<p>Working with top AI models is like riding a wild horse. Except one can communicate with a wild horse and agree on a modus operandi that works for both of us. AIs? Well it's a complete one way system.</p>
+
+<h2>What Happens</h2>
+<p>The same model, on the same task, in the same week, even in the same ongoing chat:</p>
+<ul>
+<li>produces something extraordinary, the kind of work that would take a team days;</li>
+<li>then, a few turns later, ignores an instruction it acknowledged a minute ago;</li>
+<li>repeats the error you just corrected;</li>
+<li>"improves" a page you had already approved, and ruins it;</li>
+<li>reinvents what already exists instead of using it;</li>
+<li>reads the exact fact that settles a question, and then answers against it.</li>
+</ul>
+<p>The model says "you're right, I'll do that from now on" and does it again.</p>
+
+<h2>My Own Case</h2>
+<p>Dozens, literally dozens, of failures of all kinds: in research, in writing, in coding. Not one bad day, but a level of untrustworthiness that goes up and down like a yo-yo. On the way down, the model transgresses everything it was asked to do, including rules written down in advance and repeated across Claude and GPT.</p>
+
+<h2>What It Costs</h2>
+<p>Not only tokens. Time and judgement: re-reading everything it touched, restating rules it was given, correcting, reconstructing. A good result can take three hours to refine, and vanish in the next fraction of a second.</p>
+
+<h2>I Am Not The Only One</h2>
+<ul>
+<li>A Claude user measured their own sessions: corrections went from about 1 answer in 20 to about 1 in 4, from one week to the next. (<a href="https://github.com/anthropics/claude-code/issues/105112">report</a>)</li>
+<li>A user whose written rule says "always reply in Japanese" corrected the model three times; each time it slipped back into English within the same turn. (<a href="https://github.com/anthropics/claude-code/issues/96326">report</a>)</li>
+<li>A paying ChatGPT user asked for one day's total from bank screenshots and got four different totals, each one "corrected". (<a href="https://github.com/openai/codex/issues/54326">report</a>)</li>
+<li>A user chose one model; the logs named it on every turn, yet the answers matched a smaller one. (<a href="https://github.com/openai/codex/issues/57030">report</a>)</li>
+</ul>
+<p>And more: twelve user reports so far, plus one official incident record, all listed in the full page.</p>
+
+<h2>What The Providers Have Admitted</h2>
+<p>Twice, in writing, a provider has explained why its model got worse. In April 2026, three changes made Claude Code worse, one of them a bug that "made Claude seem forgetful", and their own tests had not caught it. In September 2025, three infrastructure bugs degraded answers on and off for a month. Both times, users had been saying it for weeks.</p>
+
+<h2>Even The Builders Say So</h2>
+<p>Sam Altman, <a href="https://www.youtube.com/watch?v=F_7M4Hc-usM">speaking to a Stanford systems class</a> in June 2026, says that as you scale, stuff "breaks at an accelerating rate in an unpredictable way", and that models are still "wildly worse" than people at "very long horizon, kind of high-judgment" tasks. Scale is the promise. At the moment, this part does not work, and that's it.</p>
+
+<h2>The Questions</h2>
+<ul>
+<li>Does the service decide, without telling you, how much "thinking" your request gets?</li>
+<li>Is your request served by a different version behind the same name?</li>
+<li>In long sessions, are your rules lost when earlier context is summarised?</li>
+<li>Do hidden instructions override what you asked?</li>
+<li>Does it get worse at certain hours? My afternoons, which are America's mornings, are the worst.</li>
+<li>Past a certain level of complexity, does it stop degrading gently and simply flip?</li>
+</ul>
+<p><a class="btn alt" href="https://github.com/metanoia-hub/wild-horse">Read The Open Questions In Full</a></p>
+
+<div class="ask">
+<h3>Care To Share Your Experience?</h3>
+<p>Share it with the ready-made form: the model, the task, what changed, the date and time, where you are in the world, and an excerpt with private details removed. It needs a free GitHub account. Rather not make one? Write to me directly, same questions, in your own words.</p>
+<a class="btn main" href="https://github.com/metanoia-hub/wild-horse/issues/new?template=case.yml">Share Your Experience</a>
+<a class="btn alt" href="https://www.linkedin.com/in/lianemontagne">LinkedIn</a>
+<a class="btn alt" href="https://x.com/appliedmaverick">X</a>
+<p style="margin-top:1em;font-size:.95rem">Nothing you send is quoted outside these pages without your permission. You can analyse it properly, statistics, systems, mathematics? Let's talk.</p>
+</div>
+
+<p style="margin-top:2em">Li</p>
+</main>
+</body>
+</html>
